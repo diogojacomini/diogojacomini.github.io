@@ -1,0 +1,12 @@
+# GitHub Pages
+source: ./dist
+destination: ./_site
+plugins:
+  - jekyll-relative-links
+
+relative_links:
+  enabled: true
+  collections: true
+
+include:
+  - .nojekyll

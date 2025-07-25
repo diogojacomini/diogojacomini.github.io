@@ -30,9 +30,10 @@ Thumbs.db
 *.swo
 *~
 
-# Local build
+# Local build (keep root index.html for GitHub Pages fallback)
 dist/
 build/
+# !index.html
 
 # Logs
 *.log

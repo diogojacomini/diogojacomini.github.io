@@ -27,13 +27,18 @@ def generate_static_site():
             response = client.get("/")
 
             if response.status_code == 200:
+                html_content = response.get_data(as_text=True)
+                # Corrigir caminhos para funcionar como site estático
+                html_content = html_content.replace('href="/static/', 'href="./static/')
+                html_content = html_content.replace('src="/static/', 'src="./static/')
+                
                 with open(
                     os.path.join(output_dir, "index.html"), "w", encoding="utf-8"
                 ) as f:
-                    f.write(response.get_data(as_text=True))
-                print("index.html gerado com sucesso")
+                    f.write(html_content)
+                print("✅ index.html gerado com sucesso")
             else:
-                print(f"Erro ao gerar index.html: {response.status_code}")
+                print(f"❌ Erro ao gerar index.html: {response.status_code}")
                 return False
 
     # Copiar arquivos estáticos
