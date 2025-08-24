@@ -204,6 +204,8 @@ html {
     justify-content: center;
     backdrop-filter: blur(10px);
     border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative; /* Necessário para a imagem absoluta se posicionar dentro do círculo */
+    overflow: hidden;   /* Garante que a imagem não ultrapasse o círculo */
 }
 
 .profile-img {
