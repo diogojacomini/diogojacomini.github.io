@@ -208,19 +208,8 @@ html {
     overflow: hidden;   /* Garante que a imagem não ultrapasse o círculo */
 }
 
-.hero-avatar .fallback-icon {
-    font-size: 90px;
-    color: rgba(255,255,255,0.4);
-    z-index: 1;
-    transition: opacity .3s ease;
-}
-
 .hero-avatar.no-image {
     background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
-}
-
-.hero-avatar.no-image .fallback-icon {
-    color: rgba(255,255,255,0.8);
 }
 
 .hero-avatar.no-image::after {
