@@ -195,17 +195,26 @@ html {
 }
 
 .hero-avatar {
-    width: 250px;
-    height: 250px;
+    width: 275px;
+    height: 275px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
-    color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
     border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
 }
 
 /* Section Styles */
@@ -538,8 +547,8 @@ html {
 
 /* Blurred content for confidential information */
 .blurred-content {
-    filter: blur(3px);
-    opacity: 0.6;
+    filter: blur(7px);
+    opacity: 0.3;
     transition: all 0.3s ease;
     user-select: none;
     position: relative;
